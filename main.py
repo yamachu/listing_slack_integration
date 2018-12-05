@@ -146,7 +146,7 @@ def _first(arr, key: str):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('email', help='email of user who has integration')
-    parser.add_argument('token', help='admin token that has users:read.email scope')
+    parser.add_argument('token', help='admin token that has "admin,identify,users:read,users:read.email,team:read" scope')
     parser.add_argument('save_path', help='output file path')
     parser.add_argument('--format', choices=['raw', 'csv-full', 'csv-summary'], default='csv-full')
     args = parser.parse_args()
